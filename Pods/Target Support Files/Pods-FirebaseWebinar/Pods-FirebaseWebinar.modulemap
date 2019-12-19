@@ -1,0 +1,6 @@
+framework module Pods_FirebaseWebinar {
+  umbrella header "Pods-FirebaseWebinar-umbrella.h"
+
+  export *
+  module * { export * }
+}
