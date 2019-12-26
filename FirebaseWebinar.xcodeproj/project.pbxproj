@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D55DC4BE214AFC182A3AD8E1 /* Pods_FirebaseWebinar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE51934E99E046C684F0AF0 /* Pods_FirebaseWebinar.framework */; };
+		F09969B823B4CF4500F92F10 /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09969B723B4CF4500F92F10 /* Validators.swift */; };
+		F09969BA23B4D1A100F92F10 /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09969B923B4D1A100F92F10 /* AuthError.swift */; };
 		F0F66F0323A69DD000272AAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F66F0223A69DD000272AAD /* AppDelegate.swift */; };
 		F0F66F0523A69DD000272AAD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F66F0423A69DD000272AAD /* SceneDelegate.swift */; };
 		F0F66F0723A69DD000272AAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F66F0623A69DD000272AAD /* ViewController.swift */; };
@@ -24,6 +26,8 @@
 /* Begin PBXFileReference section */
 		61DF4114397AFC064D76A33D /* Pods-FirebaseWebinar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseWebinar.release.xcconfig"; path = "Target Support Files/Pods-FirebaseWebinar/Pods-FirebaseWebinar.release.xcconfig"; sourceTree = "<group>"; };
 		D43E6D3A4581C024CA7E542A /* Pods-FirebaseWebinar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseWebinar.debug.xcconfig"; path = "Target Support Files/Pods-FirebaseWebinar/Pods-FirebaseWebinar.debug.xcconfig"; sourceTree = "<group>"; };
+		F09969B723B4CF4500F92F10 /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
+		F09969B923B4D1A100F92F10 /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
 		F0F66EFF23A69DD000272AAD /* FirebaseWebinar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseWebinar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0F66F0223A69DD000272AAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0F66F0423A69DD000272AAD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +99,8 @@
 				F0F66F0623A69DD000272AAD /* ViewController.swift */,
 				F0F66F1A23A6A7CD00272AAD /* AuthViewController.swift */,
 				F0F66F1C23A6A7DE00272AAD /* SignInViewController.swift */,
+				F09969B723B4CF4500F92F10 /* Validators.swift */,
+				F09969B923B4D1A100F92F10 /* AuthError.swift */,
 				F0F66F1E23A6A7EE00272AAD /* LoginViewController.swift */,
 				F0F66F2023A6A80200272AAD /* PageViewController.swift */,
 				F0F66F0823A69DD000272AAD /* Main.storyboard */,
@@ -226,7 +232,9 @@
 				F0F66F2123A6A80200272AAD /* PageViewController.swift in Sources */,
 				F0F66F1B23A6A7CD00272AAD /* AuthViewController.swift in Sources */,
 				F0F66F0723A69DD000272AAD /* ViewController.swift in Sources */,
+				F09969B823B4CF4500F92F10 /* Validators.swift in Sources */,
 				F0F66F0323A69DD000272AAD /* AppDelegate.swift in Sources */,
+				F09969BA23B4D1A100F92F10 /* AuthError.swift in Sources */,
 				F0F66F1D23A6A7DE00272AAD /* SignInViewController.swift in Sources */,
 				F0F66F0523A69DD000272AAD /* SceneDelegate.swift in Sources */,
 			);
