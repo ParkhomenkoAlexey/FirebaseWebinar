@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseAuth
 import Firebase
+import GoogleSignIn
 
 class SignInViewController: UIViewController {
 
@@ -18,12 +19,12 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet weak var googleButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         errorLabel.alpha = 0
 
-        // Do any additional setup after loading the view.
     }
 
     enum AuthResult {
@@ -74,12 +75,19 @@ class SignInViewController: UIViewController {
         register(email: emailTextField.text, password: passwordTextField.text) { (result) in
             switch result {
             case .success:
-                self.showAlert(with: "Успешно", and: "Вы зарегистрированны")
+                self.showAlert(with: "Успешно!", and: "")
+                
             case .failure(let error):
                 self.showAlert(with: "Ошибка", and: error.localizedDescription)
             }
         }
     }
+    
+    @IBAction func googleRegisterPressed(_ sender: Any) {
+        GIDSignIn.sharedInstance()?.presentingViewController = self
+        GIDSignIn.sharedInstance()?.signIn()
+    }
+    
 }
 
 extension UIViewController {
@@ -90,3 +98,5 @@ extension UIViewController {
         present(alertController, animated: true, completion: nil)
     }
 }
+
+

@@ -15,11 +15,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="JcT-nZ-0yZ">
-                                <rect key="frame" x="155" y="405" width="104" height="86"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="JcT-nZ-0yZ">
+                                <rect key="frame" x="87" y="405" width="240" height="234"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="as7-0X-D8a">
-                                        <rect key="frame" x="0.0" y="0.0" width="104" height="33"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="33"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="Регистрация"/>
                                         <connections>
@@ -28,7 +28,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejc-5t-1xP">
-                                        <rect key="frame" x="0.0" y="53" width="104" height="33"/>
+                                        <rect key="frame" x="0.0" y="53" width="240" height="33"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="Авторизация"/>
                                         <connections>
@@ -36,6 +36,10 @@
                                             <segue destination="Qqi-kn-UBI" kind="show" id="62K-Z3-Y0t"/>
                                         </connections>
                                     </button>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QVe-cY-SbI" customClass="GIDSignInButton">
+                                        <rect key="frame" x="0.0" y="106" width="240" height="128"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -61,7 +65,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jwN-O4-5iM">
-                                <rect key="frame" x="30" y="118" width="354" height="230.5"/>
+                                <rect key="frame" x="30" y="118" width="354" height="280.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Почта" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d4E-6h-dNV">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
@@ -90,6 +94,13 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6I4-is-s6g">
+                                        <rect key="frame" x="0.0" y="250.5" width="354" height="30"/>
+                                        <state key="normal" title="Авторизация Google"/>
+                                        <connections>
+                                            <action selector="loginGooglePressed:" destination="Qqi-kn-UBI" eventType="touchUpInside" id="dF7-5w-Fx4"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="NFe-Aw-IWq" firstAttribute="height" secondItem="d4E-6h-dNV" secondAttribute="height" id="GFX-cz-9Mm"/>
@@ -110,6 +121,7 @@
                         <outlet property="emailTextField" destination="d4E-6h-dNV" id="KV2-JJ-1zD"/>
                         <outlet property="errorLabel" destination="grM-03-hOL" id="Uea-AV-stj"/>
                         <outlet property="loginButton" destination="NFe-Aw-IWq" id="zN0-YB-7oz"/>
+                        <outlet property="loginGoogle" destination="6I4-is-s6g" id="Vvi-iS-XHj"/>
                         <outlet property="passwordTextField" destination="Syr-pZ-fN1" id="PUG-Pi-pce"/>
                     </connections>
                 </viewController>
@@ -126,7 +138,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="LyI-PW-HF0">
-                                <rect key="frame" x="30" y="118" width="354" height="370.5"/>
+                                <rect key="frame" x="30" y="118" width="354" height="420.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Имя" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6fn-EX-jq8">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
@@ -165,6 +177,13 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kes-hH-zaB">
+                                        <rect key="frame" x="0.0" y="390.5" width="354" height="30"/>
+                                        <state key="normal" title="Регистрация Google"/>
+                                        <connections>
+                                            <action selector="googleRegisterPressed:" destination="o6N-Nb-KZR" eventType="touchUpInside" id="h2X-Hs-s9i"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="3tx-GA-ZZa" firstAttribute="height" secondItem="6fn-EX-jq8" secondAttribute="height" id="7Aw-Sj-8pW"/>
@@ -187,6 +206,7 @@
                         <outlet property="emailTextField" destination="h7U-SO-cyo" id="UD3-BX-m93"/>
                         <outlet property="errorLabel" destination="de7-Vk-DoY" id="JQY-V1-EtW"/>
                         <outlet property="firstNameTextField" destination="6fn-EX-jq8" id="VDm-ad-a1R"/>
+                        <outlet property="googleButton" destination="kes-hH-zaB" id="KYS-fk-qzz"/>
                         <outlet property="lastNameTextField" destination="JLk-zT-ga1" id="FfI-IZ-Y2Z"/>
                         <outlet property="passwordTextField" destination="3tx-GA-ZZa" id="7Rf-6f-PqU"/>
                         <outlet property="signInButton" destination="htg-FX-K02" id="BgF-kq-5RB"/>

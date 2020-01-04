@@ -28,6 +28,7 @@
 		D43E6D3A4581C024CA7E542A /* Pods-FirebaseWebinar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseWebinar.debug.xcconfig"; path = "Target Support Files/Pods-FirebaseWebinar/Pods-FirebaseWebinar.debug.xcconfig"; sourceTree = "<group>"; };
 		F09969B723B4CF4500F92F10 /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
 		F09969B923B4D1A100F92F10 /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
+		F0C4AD5B23C1080400879FEB /* FirebaseWebinar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FirebaseWebinar.entitlements; sourceTree = "<group>"; };
 		F0F66EFF23A69DD000272AAD /* FirebaseWebinar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseWebinar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0F66F0223A69DD000272AAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0F66F0423A69DD000272AAD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,14 +95,15 @@
 		F0F66F0123A69DD000272AAD /* FirebaseWebinar */ = {
 			isa = PBXGroup;
 			children = (
+				F0C4AD5B23C1080400879FEB /* FirebaseWebinar.entitlements */,
 				F0F66F0223A69DD000272AAD /* AppDelegate.swift */,
 				F0F66F0423A69DD000272AAD /* SceneDelegate.swift */,
 				F0F66F0623A69DD000272AAD /* ViewController.swift */,
 				F0F66F1A23A6A7CD00272AAD /* AuthViewController.swift */,
 				F0F66F1C23A6A7DE00272AAD /* SignInViewController.swift */,
+				F0F66F1E23A6A7EE00272AAD /* LoginViewController.swift */,
 				F09969B723B4CF4500F92F10 /* Validators.swift */,
 				F09969B923B4D1A100F92F10 /* AuthError.swift */,
-				F0F66F1E23A6A7EE00272AAD /* LoginViewController.swift */,
 				F0F66F2023A6A80200272AAD /* PageViewController.swift */,
 				F0F66F0823A69DD000272AAD /* Main.storyboard */,
 				F0F66F0B23A69DD200272AAD /* Assets.xcassets */,
@@ -124,6 +126,7 @@
 				F0F66EFC23A69DD000272AAD /* Frameworks */,
 				F0F66EFD23A69DD000272AAD /* Resources */,
 				9DD10CF981E9D6AA7674C880 /* [CP] Embed Pods Frameworks */,
+				EE38310158C76DFF654BE30D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -219,6 +222,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FirebaseWebinar/Pods-FirebaseWebinar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE38310158C76DFF654BE30D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FirebaseWebinar/Pods-FirebaseWebinar-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FirebaseWebinar/Pods-FirebaseWebinar-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FirebaseWebinar/Pods-FirebaseWebinar-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -381,6 +401,7 @@
 			baseConfigurationReference = D43E6D3A4581C024CA7E542A /* Pods-FirebaseWebinar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FirebaseWebinar/FirebaseWebinar.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TSZQ4D456H;
 				INFOPLIST_FILE = FirebaseWebinar/Info.plist;
@@ -400,6 +421,7 @@
 			baseConfigurationReference = 61DF4114397AFC064D76A33D /* Pods-FirebaseWebinar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FirebaseWebinar/FirebaseWebinar.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TSZQ4D456H;
 				INFOPLIST_FILE = FirebaseWebinar/Info.plist;
